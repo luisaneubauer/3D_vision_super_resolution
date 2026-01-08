@@ -29,3 +29,17 @@ Implemented architectures include **SRCNN**, **VDSR**, and **ResNet-based models
 ├── demo.ipynb # Demo notebook with pretrained model inference
 ├── requirements.txt # Required Python dependencies
 ├── Super_Resolution_Project_Docu.pdf # Detailed project write-up
+
+## 📂 Project Structure
+
+```text
+.
+├── train.py
+├── datasets.py
+├── losses.py
+├── transformations.py
+├── utils.py
+├── compare_baselines.py
+├── demo.ipynb
+├── requirements.txt
+└── Super_Resolution_Project_Docu.pdf
