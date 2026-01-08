@@ -35,7 +35,7 @@ Implemented architectures include **SRCNN**, **VDSR**, and **ResNet-based models
 ```text
 .
 ├── train.py
-├── datasets.py
+├── datasets.py # Custom dataset implementations (BSD100, Set5, 91-Images)
 ├── losses.py
 ├── transformations.py
 ├── utils.py
