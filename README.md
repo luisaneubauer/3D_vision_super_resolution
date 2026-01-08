@@ -1,22 +1,31 @@
-3D_vision_super_resolution
+# 3D Vision Super-Resolution
 
-##What you can do with this project:
-- Train Neural Networks (SRCNN, VDSR, ResNet) for the task of super-resolution --> train.py
-- This project file contains the custom datasets (--> datasets.py for BSD100, Set5, 91-Images)
-- You can compare the results either during training (--> train.py) or with a separete script (--> compare_baselines-py)
-- SSIM and PSNR are implemented for images as numpy arrays or as (batch) pytorch tensors.
-- The Custom Loss (Charbonnier Loss) can be found in losses.py
-- In case you want to apply data augmentation/transforms (including e.g. image normalization), these are to be found in transformations.py
-- the utils.py file contains helful functions that make our life easier. These include a function to display tensors as images using matplotlib, setting random seeds or an Average Meter that we use during training to store the PSNR and SSIM values
-- In train.py has tensorboard support --> by default commented out 
-- We have specified the required packages in requirements.txt
-- Use the demo.ipynb file to take a look at one of our trained models and proof of concept. 
-- Due to hardware limitations, the model sizes are quite small and we would like to train for more epochs if we could get our hands on a proper GPU.
-- The write-up can be found under Super_Resolution_Project_Docu.pdf
+This repository provides an end-to-end PyTorch framework for **image super-resolution** using classical and deep learning–based approaches. The project focuses on training, evaluating, and comparing convolutional neural networks for single-image super-resolution.
 
-![Alt text](Super_Resolution_Project_Docu_.jpg?raw=true "Title")
-![Alt text](Super_Resolution_Project_Docu_2.jpg?raw=true "Title")
-![Alt text](Super_Resolution_Project_Docu_3.jpg?raw=true "Title")
-![Alt text](Super_Resolution_Project_Docu_4.jpg?raw=true "Title")
-![Alt text](Super_Resolution_Project_Docu_5.jpg?raw=true "Title")
-![Alt text](Super_Resolution_Project_Docu_6.jpg?raw=true "Title")
+Implemented architectures include **SRCNN**, **VDSR**, and **ResNet-based models**, along with standard super-resolution benchmarks and evaluation metrics.
+
+---
+
+## 🚀 Features
+
+- Train super-resolution neural networks (SRCNN, VDSR, ResNet)
+- Built-in support for standard datasets (BSD100, Set5, 91-Images)
+- Quantitative evaluation using **PSNR** and **SSIM**
+- Custom **Charbonnier Loss** implementation
+- Modular data augmentation and preprocessing pipeline
+- TensorBoard support for training monitoring
+- Baseline comparison utilities
+- Jupyter notebook demo with pretrained models
+
+---
+
+## 📂 Project Structure
+├── train.py # Training script for all models
+├── datasets.py # Custom dataset implementations (BSD100, Set5, 91-Images)
+├── losses.py # Custom loss functions (Charbonnier Loss)
+├── transformations.py # Data augmentation and preprocessing
+├── utils.py # Helper utilities (visualization, seeding, metrics, AverageMeter)
+├── compare_baselines.py # Script to compare trained models and baselines
+├── demo.ipynb # Demo notebook with pretrained model inference
+├── requirements.txt # Required Python dependencies
+├── Super_Resolution_Project_Docu.pdf # Detailed project write-up
